@@ -26,7 +26,7 @@ class Piece(Enum):
         return 'empty' if self == self.EMPTY else super(Piece, self).__str__().replace('P1_', 'w').replace('P2_', 'b').lower()[len(self.__class__.__name__) + 1:]
 
     def getIcon(self) -> QIcon:
-        assets = '/home/redroot/Desktop/dev/python/Chess/JohnPablok Cburnett Chess set/SVG with shadow/'
+        assets = 'JohnPablok Cburnett Chess set/SVG with shadow/'
         return QIcon(QPixmap(join(assets, str(self))))
 
     def isPlayers(self, player: bool) -> bool:
