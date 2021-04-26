@@ -3,8 +3,8 @@ from typing import List
 import PySide6
 
 from PySide6.QtGui import QGuiApplication, QResizeEvent
-from game.piece import Piece
-from game.game import Game, Result
+from piece import Piece
+from game import Game, Result
 
 from PySide6.QtCore import QSize, QTimer
 from PySide6.QtWidgets import QApplication, QFileDialog, QLabel, QMainWindow, QMenuBar, QMessageBox, QPushButton, QWidget

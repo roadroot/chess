@@ -1,5 +1,5 @@
-from game.piece import Piece
-from game.game import Game
+from piece import Piece
+from game import Game
 
 class MinMax:
     def __init__(self, game: Game) -> None:
