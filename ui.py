@@ -5,12 +5,12 @@ import PySide6
 from PySide6.QtGui import QGuiApplication, QResizeEvent
 from game.piece import Piece
 from game.game import Game, Result
-import sys
+
 from PySide6.QtCore import QSize, QTimer
 from PySide6.QtWidgets import QApplication, QFileDialog, QLabel, QMainWindow, QMenuBar, QMessageBox, QPushButton, QWidget
 import functools
 from enum import Enum
-
+from sys import argv
 class ColorPalette(Enum):
     ACTIVE_COLOR = "#605050"
     TILE_ONE = "#400000"
@@ -22,7 +22,7 @@ class ColorPalette(Enum):
 
 class MainUI(QApplication):
     def __init__(self, saveDefaultPath: List[str] = None, loadFile: List[str] = None, time: float = None, enableIa:bool = None):
-        super(MainUI, self).__init__(sys.argv)
+        super(MainUI, self).__init__(argv)
         if loadFile:
             self.game = Game.loadJson(loadFile[0], self.trigger, allowedTime=time)
         else:
